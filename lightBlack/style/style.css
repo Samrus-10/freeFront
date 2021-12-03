@@ -1,0 +1,97 @@
+
+.main_container{
+    display: flex;
+    background-color: darkgrey;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.btns_toggle_sun{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.btns_toggle_moon{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.btns_toggle_rotate{
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    animation-name: rotate;
+    animation-duration: 4.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.3s;
+}
+
+@keyframes rotate {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(365deg);
+    }
+}
+
+.body_current_sun{
+    background-color: floralwhite;
+}
+
+.body_to_moon{
+    animation-name: color_to_moon;
+    animation-duration: 4.5s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+}
+
+@keyframes color_to_moon {
+    0% {
+        background-color: floralwhite;
+    }
+    /* 10%{}
+    20%{}
+    30%{}
+    40%{}
+    50%{}
+    60%{}
+    70%{}
+    80%{}
+    90%{} */
+    100% {
+        background: grey;
+    }
+}
+
+.body_current_moon{
+     background-color:grey;
+}
+
+.body_to_sun{
+    
+    animation-name: color_to_sun;
+    animation-duration: 4.5s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+}
+
+@keyframes color_to_sun {
+    0% {
+        background-color: grey;
+    }
+    /* 10%{}
+    20%{}
+    30%{}
+    40%{}
+    50%{}
+    60%{}
+    70%{}
+    80%{}
+    90%{} */
+    100% {
+        background: floralwhite;
+    }
+}
